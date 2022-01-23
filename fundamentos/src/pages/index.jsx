@@ -1,32 +1,21 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import Layout from "../components/Layout";
-import Navegador from "../components/Navegador";
+import Header from "../components/Header";
+import Card from "../components/Card";
+import styles from "../styles/index.module.css";
 
 export default function Home() {
-  const titulo = <h1> É o titulo</h1>;
-
-  function subtitulo() {
-    return <h2>{"Esta tag é H2".toLocaleUpperCase()}</h2>;
-  }
   return (
     <div>
-      <Navegador destino="/teste" texto="teste"></Navegador>
-      <Navegador destino="/exemplo" texto="exemplo"></Navegador>
-      <Navegador destino="/cliente/sp-2/123" texto="cliente"></Navegador>
-      <Navegador destino="/estado" texto="componente com estado"></Navegador>
-      <Navegador destino="/integracao" texto="Integração"></Navegador>
+      <div className={styles.list}>
+        <Card dir="/estado" name="Estado"></Card>
+        <Card dir="/estilo" name="Estilo"></Card>
+        <Card dir="/exemplo" name="Exemplo"></Card>
+      </div>
 
-      {titulo}
-
-      <Link href="/estilo"> Estilo</Link>
-
-      <Layout>
-        <h1>Hello World</h1>
-        {subtitulo()}
-        <p>{JSON.stringify({ nome: "Nuno" })}</p>
-      </Layout>
+      <div className={styles.list}>
+        <Card dir="/integracao" name="Integracao"></Card>
+        <Card dir="/cliente/Aveiro/Nuno" name="Cliente por Código"></Card>
+        <Card dir="/teste" name="Teste"></Card>
+      </div>
     </div>
   );
 }

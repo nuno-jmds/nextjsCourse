@@ -8,8 +8,6 @@ export default function Example() {
     <div>
       <h1>Exemplo</h1>
 
-      <Header name="Nuno" />
-      <Header  />
     </div>
   );
 }
