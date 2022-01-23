@@ -1,0 +1,16 @@
+.layout{
+    background-color: aqua;
+    display: flex;
+}
+
+.leftblock{
+background-color: rgba(50,50,50,0.2);
+flex:1;
+
+}
+
+.rightblock{
+background-color: rgba(218, 14, 95, 0.8);
+flex:1;
+
+}
